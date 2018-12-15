@@ -110,7 +110,7 @@
             
           <form >
         <div class="form__group">
-           Hotel Name: <input type="text" placeholder="Hotel Name"  class="form-control" id="hotel" name="hotel"  />
+           Hotel Name: <input type="text" placeholder="Hotel Name"  class="form-control" id="hotel" name="hotel" required  />
         </div>
                 
                  
@@ -119,15 +119,16 @@
         </div>
         
          <div class="form__group">
-            Number Of Rooms: <input type="Number" placeholder="No of rooms"  class="form-control" id="room" name="room"  />
+            Number Of Rooms: <input type="Number" placeholder="No of rooms"  class="form-control" id="room" name="room" required />
         </div>
         
           <div class="form__group">
-            Rate Per Room: <input type="Number" placeholder="$"  class="form-control" id="roomrate"  />
+            Rate Per Room: <input type="Number" placeholder="$"  class="form-control" id="roomrate" required />
         </div>
         <div class="form__group">
-            Number Of Nights: <input type="Number" placeholder="Nights"  class="form-control"  id = "nights" />
+            Number Of Nights: <input type="Number" placeholder="Nights"  class="form-control"  id = "nights" required />
         </div>
+        <input type="hidden" value="1" id="total"/>
          <br>
          <br>
    			
@@ -137,17 +138,11 @@
        <button class="btn btn-primary" onclick="addHtmlTableRow();">Add</button>
        <button class="btn btn-primary" onclick="editHtmlTbleSelectedRow();">Edit</button> 
        <button value="Remove" class="btn btn-danger" onclick="removeSelectedRow();"  >Remove</button>
+       <button value="Remove" class="btn btn-danger" onclick="Total();"  >Add All</button>
         
 
             
-            
-            
-            
-            
-            
-            
-            
-            
+                      
            			 </div>
            		 </div>
            		  <!-- DataTables Example -->
@@ -168,11 +163,6 @@
                       <th>Number Of Nights</th>
                       <th>Total</th>
                     </tr>
-                  
-                  
-               
-                 
-                 
                  
                   
                 </table>
@@ -182,7 +172,10 @@
           </div>
           
      
+          <p id ="area_total">
           
+         
+          </p>
            		 
         </div>						<!-- End of container fluid  -->
         

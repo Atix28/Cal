@@ -11,16 +11,26 @@
             cell3 = newRow.insertCell(2),
             cell4 = newRow.insertCell(3),
             cell5 = newRow.insertCell(4),
+            cell6 = newRow.insertCell(5),
             hotel = document.getElementById("hotel").value,
             rtype = document.getElementById("rtype").value,
-            room = document.getElementById("room").value;
-        	roomrate = document.getElementById("roomrate").value;
-        	nights = document.getElementById("nights").value;
+            room = document.getElementById("room").value,
+        	roomrate = document.getElementById("roomrate").value,
+        	nights = document.getElementById("nights").value,
+        	total = document.getElementById("total").value;
+        	
+        	
         cell1.innerHTML = hotel;
         cell2.innerHTML = rtype;
         cell3.innerHTML = room;
         cell4.innerHTML = roomrate;
         cell5.innerHTML = nights;
+        cell6.innerHTML = (roomrate * nights);
+        
+        // making the total 
+        
+        
+        
         // call the function to set the event to the new row
         selectedRowToInput();
     
@@ -39,8 +49,9 @@
               document.getElementById("hotel").value = this.cells[0].innerHTML;
               document.getElementById("rtype").value = this.cells[1].innerHTML;
               document.getElementById("room").value = this.cells[2].innerHTML;
-              document.getElementById("roomrate").value = this.cells[2].innerHTML;
-              document.getElementById("nights").value = this.cells[2].innerHTML;
+              document.getElementById("roomrate").value = this.cells[3].innerHTML;
+              document.getElementById("nights").value = this.cells[4].innerHTML;
+              document.getElementById("total").value = this.cells[5].innerHTML;
             };
         }
     }
@@ -52,13 +63,15 @@
             rtype = document.getElementById("rtype").value,
             room = document.getElementById("room").value,
             roomrate = document.getElementById("roomrate").value,
-            nights = document.getElementById("nights").value;
+            nights = document.getElementById("nights").value,
+            total = (roomrate * nights);
       
         table.rows[rIndex].cells[0].innerHTML = hotel;
         table.rows[rIndex].cells[1].innerHTML = rtype;
         table.rows[rIndex].cells[2].innerHTML = room;
-        table.rows[rIndex].cells[2].innerHTML = roomrate;
-        table.rows[rIndex].cells[2].innerHTML = nights;
+        table.rows[rIndex].cells[3].innerHTML = roomrate;
+        table.rows[rIndex].cells[4].innerHTML = nights;
+        table.rows[rIndex].cells[5].innerHTML = total;
       
     }
     
@@ -71,4 +84,20 @@
         document.getElementById("room").value = "";
         document.getElementById("roomrate").value = "";
         document.getElementById("nights").value = "";
+        document.getElementById("total").value = "";
     }
+    
+    function Total()
+    {
+
+    	var td = document.querySelectorAll('#table > tr > td:last-child');
+
+    	var total = [].reduce.call(td, function(a, b) {
+    	    return a + parseInt(b.innerText);
+    	}, 0);
+
+    	document.getElementById('area_total').innerText = total;
+    } 
+    
+    
+    
