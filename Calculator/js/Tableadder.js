@@ -98,7 +98,7 @@
             sumVal = sumVal + parseInt(table.rows[i].cells[5].innerHTML);
         }
         
-        document.getElementById("area_total").innerHTML = "Sum Value = " + sumVal;
+        document.getElementById("area_total").innerHTML = "TOTAL = " + sumVal;
         console.log(sumVal);
     } 
     
