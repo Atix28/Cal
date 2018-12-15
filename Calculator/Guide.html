@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Person</title>
+    <title> Tour Guide</title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -86,10 +86,9 @@
 
           <!-- Breadcrumbs-->
           <ol class="breadcrumb">
-                    
-            <li class="breadcrumb-item active">Person Details >></li>
-              <!-- <li class="breadcrumb-item">
-              <a href="Hotel.html">Hotel Details</a>-->
+               <li class="breadcrumb-item">
+              <a href="Cal.html">Person Details >></a><a href="Hotel.html">Hotel Details >></a><a href="Milage.html">Milage >></a><a href="Attraction.html">Ticket total for Attractions >></a>
+              <li class="breadcrumb-item active">Tour Guide Cost</li>
           </ol>
 
   
@@ -97,27 +96,27 @@
       <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-fw fa-users"></i>
-              Person Details</div>
+              Tour Guide cost details</div>
             <div class="card-body">
             
             
              <form class="form" action="Add_cctv" method="post" enctype="multipart/form-data">
         <div class="form__group">
-            Number of people: <input type="Number" placeholder="Person" name="person" class="form-control"  />
+            Name of the Guide: <input type="Number" placeholder="Eg:Mr" name="Gname" class="form-control"  />
         </div>
                 
                  
          <div class="form__group">
-            Number of Children: <input type="Number" placeholder="Children" name="child" class="form-control"  />
+            Guide Rate Per Day: <input type="Number" placeholder="$" name="Grate" class="form-control"  />
         </div>
-        
+        <!--
          <div class="form__group">
-            Number of Days: <input type="Number" placeholder="Days" name="days" class="form-control"  />
+            Ticket rate for an Adult: <input type="Number" placeholder="$" name="Priceadult" class="form-control"  />
         </div>
         
           <div class="form__group">
             Number of Nights: <input type="Number" placeholder="Nights" name="night" class="form-control"  />
-        </div>
+        </div>-->
          <br>
          <br>
    

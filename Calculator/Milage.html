@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Hotel</title>
+    <title> Milage</title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -93,9 +93,9 @@
           <!-- Breadcrumbs-->
           <ol class="breadcrumb">
                     
-            <li class="breadcrumb-item"><a href="Cal.html">Person Details >></a></li>
+            <li class="breadcrumb-item"><a href="Cal.html">Person Details >></a><a href="Hotel.html">Hotel Details >></a></li>
                <li class="breadcrumb-item active">
-              Hotel Details
+              Milage
               </li>
           </ol>
 
@@ -104,26 +104,26 @@
       <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              Hotel Details</div>
+              Milage</div>
             <div class="card-body">
             
             
              <form class="form" action="Add_cctv" method="post" enctype="multipart/form-data">
         <div class="form__group">
-           Hotel Name: <input type="text" placeholder="Hotel Name" name="hotel" class="form-control"  />
+          Vehicle Type: <input type="text" placeholder="Eg:Bus" name="Vtype" class="form-control"  />
         </div>
                 
                  
          <div class="form__group">
-            Room Type: <input type="Text" placeholder="Type" name="rtype" class="form-control"  />
+            Vehicle Model: <input type="Text" placeholder="Eg:Volvo" name="vmodel" class="form-control"  />
         </div>
         
          <div class="form__group">
-            Number Of Rooms: <input type="Number" placeholder="No of rooms" name="room" class="form-control"  />
+            Total Number of Kilometers: <input type="Number" placeholder="KM" name="Distance" class="form-control"  />
         </div>
         
           <div class="form__group">
-            Rate Per Room: <input type="Number" placeholder="$" name="roomrate" class="form-control"  />
+            Rate Per Kilometer: <input type="Number" placeholder="$" name="RateKM" class="form-control"  />
         </div>
         <div class="form__group">
             Number Of Nights: <input type="Number" placeholder="Nights" name="nights" class="form-control"  />
@@ -148,7 +148,7 @@
             
            			 </div>
            		 </div>
-           		  <!-- DataTables Example -->
+           		  <!-- DataTables Example-->
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
@@ -166,7 +166,7 @@
                       <th>Total</th>
                     </tr>
                   </thead>
-                  <tfoot>
+                  <tfoot><!--
                     <tr>
                       <th>Hotel Name</th>
                       <th>Room Type</th>
@@ -632,7 +632,7 @@
                       <td>27</td>
                       <td>2011/01/25</td>
                       <td>$112,000</td>
-                    </tr>
+                    </tr>-->
                   </tbody>
                 </table>
               </div>
