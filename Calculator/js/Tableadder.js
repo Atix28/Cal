@@ -18,14 +18,15 @@
         	roomrate = document.getElementById("roomrate").value,
         	nights = document.getElementById("nights").value,
         	total = document.getElementById("total").value;
-        	
+        	var count = 0;
+        	count  = count + total;
         	
         cell1.innerHTML = hotel;
         cell2.innerHTML = rtype;
         cell3.innerHTML = room;
         cell4.innerHTML = roomrate;
         cell5.innerHTML = nights;
-        cell6.innerHTML = (roomrate * nights);
+        cell6.innerHTML = (roomrate * nights * room );
         
         // making the total 
         
@@ -33,6 +34,7 @@
         
         // call the function to set the event to the new row
         selectedRowToInput();
+        document.getElementById('area_total').innerText = count;
     
     }
     
@@ -64,7 +66,7 @@
             room = document.getElementById("room").value,
             roomrate = document.getElementById("roomrate").value,
             nights = document.getElementById("nights").value,
-            total = (roomrate * nights);
+            total = (roomrate * nights * room);
       
         table.rows[rIndex].cells[0].innerHTML = hotel;
         table.rows[rIndex].cells[1].innerHTML = rtype;
