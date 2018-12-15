@@ -18,8 +18,7 @@
         	roomrate = document.getElementById("roomrate").value,
         	nights = document.getElementById("nights").value,
         	total = document.getElementById("total").value;
-        	var count = 0;
-        	count  = count + total;
+        	
         	
         cell1.innerHTML = hotel;
         cell2.innerHTML = rtype;
@@ -34,7 +33,7 @@
         
         // call the function to set the event to the new row
         selectedRowToInput();
-        document.getElementById('area_total').innerText = count;
+       
     
     }
     
@@ -92,13 +91,15 @@
     function Total()
     {
 
-    	var td = document.querySelectorAll('#table > tr > td:last-child');
-
-    	var total = [].reduce.call(td, function(a, b) {
-    	    return a + parseInt(b.innerText);
-    	}, 0);
-
-    	document.getElementById('area_total').innerText = total;
+        var table = document.getElementById("table"), sumVal = 0;
+        
+        for(var i = 1; i < table.rows.length; i++)
+        {
+            sumVal = sumVal + parseInt(table.rows[i].cells[5].innerHTML);
+        }
+        
+        document.getElementById("area_total").innerHTML = "Sum Value = " + sumVal;
+        console.log(sumVal);
     } 
     
     
