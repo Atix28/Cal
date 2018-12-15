@@ -10,22 +10,15 @@
             cell2 = newRow.insertCell(1),
             cell3 = newRow.insertCell(2),
             cell4 = newRow.insertCell(3),
-            cell5 = newRow.insertCell(4),
-            cell6 = newRow.insertCell(5),
-            hotel = document.getElementById("hotel").value,
-            rtype = document.getElementById("rtype").value,
-            room = document.getElementById("room").value,
-        	roomrate = document.getElementById("roomrate").value,
-        	nights = document.getElementById("nights").value,
+            name = document.getElementById("Nattraction").value,
+            child = document.getElementById("Pricechild").value,
+            adult = document.getElementById("Priceadult").value,
         	total = document.getElementById("total").value;
         	
         	
-        cell1.innerHTML = hotel;
-        cell2.innerHTML = rtype;
-        cell3.innerHTML = room;
-        cell4.innerHTML = roomrate;
-        cell5.innerHTML = nights;
-        cell6.innerHTML = (roomrate * nights);
+        cell2.innerHTML = child;
+        cell3.innerHTML = adult;
+        cell4.innerHTML = ( * nights);
         
         // making the total 
         
