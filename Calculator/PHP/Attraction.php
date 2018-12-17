@@ -2,8 +2,7 @@
 
 session_start();
 
-$adultval = $_GET['adult'];
-
-echo "Your registration is: ".$adultval.".";
+var_dump($_SESSION['adult']);
+echo "Your registration is: ".$adult.".";
 
 ?>

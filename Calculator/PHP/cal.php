@@ -1,15 +1,11 @@
  <!--PHP-->
-             <?php
-                int x=1;
-                    session_start();
-                    $_SESSION['adult'] = $adultval;
-                    $_SESSION['child'] = $childval;
-                  
-                  if (x=1){
-  //You need to redirect
-  header("Hotel.html"); 
-  exit();
+ <?php
+   session_start();
+    if (!isset($_SESSION['adult']) && isset($_GET['adult'])){
+    	 $_SESSION['adult'] = $_GET['adult'];
+         header("Location: Attraction.php");                 
+         exit();
  }
-
-             ?>
+?>
 <!-- php ends-->
+
